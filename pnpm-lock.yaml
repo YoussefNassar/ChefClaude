@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@huggingface/inference':
+    specifier: ^3.1.2
+    version: 3.1.2
   react:
     specifier: 19.0.0-rc-8b08e99e-20240713
     version: 19.0.0-rc-8b08e99e-20240713
@@ -400,6 +403,17 @@ packages:
     os: [win32]
     requiresBuild: true
     optional: true
+
+  /@huggingface/inference@3.1.2:
+    resolution: {integrity: sha512-oaSTSlQmx2QY7khWSWUW8Uc47XdVTdTnu11S0ScDKdappHe9Eu8MmeoJDvGvM5rV/X34nOfnovc9X/9HcfNnWQ==}
+    engines: {node: '>=18'}
+    dependencies:
+      '@huggingface/tasks': 0.15.2
+    dev: false
+
+  /@huggingface/tasks@0.15.2:
+    resolution: {integrity: sha512-uVAf1qOP4s/il46+NsdnZ0AExcEWsl61z4t9BawM56DJfZlEs4+/dH2o5V5j733VpC7NahaEb+/mfP3sZXqdlw==}
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.8:
     resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}

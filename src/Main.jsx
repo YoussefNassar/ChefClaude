@@ -1,6 +1,7 @@
 import React from "react"
 import IngredientsList from "./components/IngredientsList"
 import ClaudeRecipe from "./components/ClaudeRecipe"
+import {getRecipeFromMistral} from "../ai";
 
 export default function Main() {
     const [ingredients, setIngredients] = React.useState(
@@ -10,6 +11,7 @@ export default function Main() {
 
     function toggleRecipeShown() {
         setRecipeShown(prevShown => !prevShown)
+        getRecipeFromMistral(ingredients).then(r => console.log(r));
     }
 
     function addIngredient(formData) {
